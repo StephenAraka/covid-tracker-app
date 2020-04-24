@@ -17,6 +17,7 @@ const CountryPicker = () => {
       <FormControl className={styles.formControl}>
         <NativeSelect>
           <option value="global">Global</option>
+          {countryList.map((country, index) => <option key={index} value={country}>{country}</option>)}
         </NativeSelect>
       </FormControl>
     </div>
