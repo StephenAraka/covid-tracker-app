@@ -10,9 +10,9 @@ export const fetchData = async (country) => {
   }
 
   try {
-    const response = await axios.get(dynamicUrl);
+    const { data: { confirmed, recovered, deaths, lastUpdate } } = await axios.get(dynamicUrl);
 
-    return response;
+    return { confirmed, recovered, deaths, lastUpdate };
 
   } catch (error) {
     console.log(error);
