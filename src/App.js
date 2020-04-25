@@ -30,6 +30,6 @@ export default class App extends Component {
         <CountryPicker onChange={this.handleCountryChange} />
         <Chart data={data} country={country} />
       </div>
-    )
+    );
   }
 }
